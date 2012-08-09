@@ -5,12 +5,12 @@ class UserSessionsController < ApplicationController
 
   def create
   	@user_session = UserSession.new( params[:user_session] )
-  	if UserSession.where( :email => params[:email] )
+
+  	if @user_session.save
       @current_user_session = @user_session
       flash[:notice] = "Login successful!"
-      redirect_to :controller => "users", :action => "new"
     else
-      render :action => new
+      render :action => 'new'
     end
   end
 end
