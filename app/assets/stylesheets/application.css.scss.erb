@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ @font-face {
+ 	font-family: 'capriola';
+ 	src: url( '<%= asset_path('Capriola-Regular.ttf') %>' );
+ }
+
+ body {
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	background-image: url( /assets/background-gradient.jpg );
+ }
+
+ #container {
+ 	margin: auto;
+ 	width: 1024px;
+ 	height: 768px;
+ 	position: relative;
+ }
+
+ header {
+ 	width: 100%;
+ 	height: 100px;
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	background-image: url( /assets/Header.png );
+ 	
+ 	nav {
+	    top: 40px;
+	    margin: 0;
+	    right: 50px;
+	    height: 40px;
+	    width: 700px;
+	    position: absolute;
+	    background-size: 100% 100%;
+	    background-repeat: no-repeat;
+	    border: none;
+	    border-radius: 40px 10px;
+	 	background-image: url( /assets/navigation_bg.png );
+
+	 	a {
+	 		top: 10px;
+	 		margin-left: 40px;
+	 		margin-right: 40px;
+	 		position: relative;
+	 		font-family: Capriola;
+	 		text-decoration: none;
+	 	}
+	 }
+ }

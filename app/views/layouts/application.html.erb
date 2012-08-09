@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UniversityProject</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<nav>
+				<%= link_to 'Home' %>
+				<%= link_to 'Two' %>
+				<%= link_to 'Three' %>
+				<%= link_to 'Four' %>
+				<%= link_to 'Five' %>
+			</nav>
+		</header>
+		<section>
+			<%= yield %>
+		</section>
+		<footer></footer>
+	</div>
+</body>
+</html>
