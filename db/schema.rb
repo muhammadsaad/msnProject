@@ -21,12 +21,14 @@ ActiveRecord::Schema.define(:version => 20120804150956) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "first_name", :null => false
-    t.string   "last_name",  :null => false
-    t.string   "email",      :null => false
+    t.string   "first_name",       :null => false
+    t.string   "last_name",        :null => false
+    t.string   "email",            :null => false
     t.string   "country"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "password",         :null => false
+    t.string   "confirm_password", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end

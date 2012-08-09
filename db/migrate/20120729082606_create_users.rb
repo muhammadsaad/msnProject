@@ -1,12 +1,14 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-    	t.string :first_name,		:null => false, :limit => 255
-    	t.string :last_name,		:null => false, :limit => 255
-    	t.string :email,			:null => false, :limit => 255
-    	t.string :country,			:null => true,	 :limit => 255
+    	t.string :first_name,								:null => false, 		:limit => 255
+    	t.string :last_name,								:null => false, 		:limit => 255
+    	t.string :email,										:null => false, 		:limit => 255
+    	t.string :country,									:null => true,			:limit => 255
+    	t.string :password,									:null => false,			:limit => 255
+    	t.string :confirm_password,					:null => false, 		:limit => 255
 
-      	t.timestamps
+     	t.timestamps
     end
   end
 end
