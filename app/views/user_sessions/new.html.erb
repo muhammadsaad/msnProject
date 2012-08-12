@@ -1,6 +1,6 @@
 <% content_for :script_additions do %>
-  $(document).ready(function() {
-    //$('input[placeholder], textarea[placeholder]').placeholder();
+  $( ocument ).ready( function() {
+    $( 'input[ type=checkbox ], input[ type=radio ]').prettyCheckboxes();
   });
 <% end %>
 
@@ -19,6 +19,8 @@
 		  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
 		  <br />
 		  <%= f.submit "Login" %>
+		  <%= button_to "Create New User", { :acion => 'new', :controller => 'users' }, :remote => true %>
+
 	  </div>
   </div>
 <% end %>

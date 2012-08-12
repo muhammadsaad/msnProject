@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
 
   	if @user_session.save
       @current_user_session = @user_session
-      flash[:notice] = "Login successful!"
+      render :inline => 'Login Successful'
     else
       render :action => 'new'
     end
